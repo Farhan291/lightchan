@@ -24,7 +24,7 @@ const validBoards = {
 };
 
 export default async function BoardPage({ params }: { params: { board: string } }) {
-  const { board } = await params;
+  const { board } = params;
 
   if (!(board in validBoards)) {
     notFound();
