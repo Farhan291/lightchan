@@ -45,7 +45,7 @@ export default async function ThreadView({ params }: { params: Promise< { id: st
             <div className="bg-[#EEF2FF]" > 
                 <h1 className="text-[40px] text-[#AF0A0F] font-bold flex justify-center items-center mb-6">/{thread.board}/ -{validBoards[thread.board as keyof typeof validBoards]}</h1>
                 <NewCommentToggle/>
-                <Link href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${thread.board}`} className="hover:text-[#DD0000]">[Return]</Link>
+                <Link href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/board/${thread.board}`} className="hover:text-[#DD0000]">[Return]</Link>
                 {thread?.img_url ? (
                     <Image
                         src={thread.img_url}
