@@ -23,8 +23,8 @@ const validBoards = {
   "r": "rant"
 };
 
-export default async function BoardPage({ params }: { params: { board: string } }) {
-  const { board } = params;
+export default async function BoardPage({ params }: { params: Promise<{ board: string }> }) {
+  const { board } =  await params;
 
   if (!(board in validBoards)) {
     notFound();
