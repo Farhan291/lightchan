@@ -29,7 +29,7 @@ const validBoards = {
 };
 
 
-export default async function ThreadView({ params }: { params: { id: string } }) {
+export default async function ThreadView({ params }: { params: Promise< { id: string }> }) {
     try {
         const { id } = await params
 
