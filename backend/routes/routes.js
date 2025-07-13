@@ -17,4 +17,6 @@ router.post('/post/thread',uploadThreadImage, ThreadSave)
 router.post('/post/comment',CommentImage,commentSave)
 
 router.delete('/admin/thread',adminverify)
+
+
 export default router;

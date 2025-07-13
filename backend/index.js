@@ -20,7 +20,7 @@ app.use("/api",router)
 // self ping to prevent sleep onrender
 const ping = async () => {
   try{
-    const resp =await axios.get( "https://lightchan.onrender.com/api/ping")
+    const resp =await axios.get( "https://lightchan.onrender.com/ping")
     console.log(resp.status)
 
   }catch(error){
